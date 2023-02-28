@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishkarsh Portfolio</title>
+    <link rel="icon" type="image/webp" href="download.webp">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="father">
+        <div class="container">
+            <nav>
+                <img src="download.png" class="logo" >
+                <ul id="sidemenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <!-- <li><a href="#">Services</a></li> -->
+                    <!-- <li><a href="#">Portfolio</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                    <img src="cross.png" class="fas fa-times" onclick="closemenu()" height="15px" width="15px" >
+                </ul>
+                <img src="menu.png" class="fas fa-bars" onclick="openmenu()" height="20px" width="20px">
+            </nav>
+            
+            <div class="father-text">
+                <p>FULL STACK WEB DEVELOPER <cite>(running)</cite> &#128512;</p>
+                <h1>Hi, I'm <span> Nishkarsh Verma</span> <br> From UttarPradesh(Konch)</h1>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- about  -->
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-column-1">
+                    <img src="nishkarsh2.jpg" alt="">
+                </div>
+                <div class="about-column-2">
+                    <h1 class="newera">About Me</h1><br>
+                    <p>Hi,I’m Nishkarsh Verma </p> <br>
+                   <p> I’m currently a 3rd Year undergrad majoring in computer science & engineering from Gurukula Kangri Vishwavidyalaya Haridwar,Uttarkhand. I am from konch, UttarPradesh. I have consistently ranked among the top 10 students of CSE on my campus.                        I’m very energetic and eager front-end developer looking for a role in established IT company and recently trying to do competitive programming in C++. I always  look for an opportunity to utilize my 100% potential to my work and to the company.I use a creative approach to problem solve, dependable person, Hardworking and always the last to leave the office in the evening. In free time i watch south movies, webseries, playing cricket & learning new skills.
+                     .</p>
+                     <br>
+                     <h1><cite>Enjoying my carrier is more important than earning a high salary or flashy title</cite></h1>
+                    <div class="achievement">
+                        <p class="achievement-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="achievement-links" onclick="opentab('experience')">Experience</p>
+                        <p class="achievement-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Linux</li>
+                            <li>Ms-Excel</li>
+                            <li>Oracle SQL</li>
+                            <li>C,C++</li>
+                            <li>HTML,CSS,JS</li>
+                            <li>AWS Cloud Computing</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023 - Current</span><br> Web Development Bootcamp at @CODEHELP</li>
+                            <li><span>2022</span><br> Cloud Computing & Linux share some ideas in College</li>
+                            <li><span>2023</span><br>Portfolio</li>
+                            <li><span>2021</span><br>Banking project </li>
+                            <li><span>2022</span><br> Ethical Hacking & Cyber Security</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2018</span><br>10th Form Morning Star Chidren's Senior Secondary Academy </li>
+                            <li><span>2020</span><br>12th Form Morning Star Chidren's Senior Secondary Academy </li>
+                            <li><span>2024</span><br>B.tech Form Gurukula Kangri Vishwavidyalaya,Haridwar</li>
+                           
+                        </ul>
+                    </div>
+
+                    </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p ><img src="mail.png" alt="mail"> Nishkarshverma90@gmail.com</p>
+                    <p><img src="phone.png" alt="phone">7523059884</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/vermanishkarsh92" target="_blank"><img class="self" src="fb.png" height="36px"></a>
+                        <a href="https://www.github.com/urstrulynishkarsh" target="_blank"><img src="github.png" height="36px" class="self" ></a>
+                        <a href="https://www.instagram.com/urstrulynishkarsh" target="_blank"><img src="instagram.png" height="36px" class="self"></a>
+                        <a href="https://www.linkedin.com/in/nishkarsh-verma-980a62216/" target="_blank"><img src="linkedin.png" height="36px" class="self"></a>
+
+                    </div>
+                    <a href="NISHKARSH VERMA resume.pdf" class="btn btn2">Download Resume</a>
+
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Enter Your Name" required="required">
+                    <input type="email" name="Email" placeholder="Enter Your Email" required="required">
+                    <textarea name="Message" id="msg"  rows="7" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="reset" class="btn btn2">Reset</button>
+                    </form>
+                    <span id="send"></span>
+
+                </div>
+            </div>
+        </div>
+        <footer class="copyright">
+            <P>Copyright &#169; Nishkarsh Verma &#10084;&#65039;</P>
+        </footer>
+    </div>
+
+
+    <script>
+        var achievementlinks=document.getElementsByClassName("achievement-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(achievementlink of achievementlinks){
+                achievementlink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu()
+        {
+            sidemenu.style.right="0";
+        }
+        function closemenu()
+        {
+            sidemenu.style.right="-200px";
+        }
+    </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbz1bWswbZFcAXLilwg677OoZClA_x0VcYru9_lX0RXN0NPbFhP6pCnjN2xYUFrVGMiwPg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const send=document.getElementById("send")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                send.innerHTML="Message sent successfully"
+                setTimeout(() => {
+                    send.innerHTM = ""
+                },"1000")
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

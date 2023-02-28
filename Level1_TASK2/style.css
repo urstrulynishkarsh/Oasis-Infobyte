@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: #080808;
+    color: #fff;
+}
+html{
+    scroll-behavior: smooth;
+}
+#father{
+    width: 100%;
+    height: 100vh;
+    background-image: url(nishkarsh3.png);
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%;
+
+}
+
+
+nav{
+        display: flex;
+        
+        /* position: fixed; */
+        justify-content: space-between;
+}
+.logo{
+    width:140px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+    /* position: fixed; */
+}
+
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    /* padding: 10px; */
+}
+
+
+
+
+nav ul li a::after{
+    content: '';
+    display: inline-block;
+    width: 0%;
+    height: 3px;
+    background: rgb(233, 17, 53);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s; 
+}
+nav ul li a:hover::after{
+    color: aqua; 
+    width: 100%;
+
+}
+nav ul li a:hover{
+    color: rgb(73, 231, 24);
+    width: 100%;
+}
+.father-text{
+    margin-top: 10%;
+    font-size: 25px;
+    
+    /* color: #fff; */
+}
+.father-text h1{
+    font-size: 42px;
+    margin-top: 20px;
+}
+.father-text h1 span{
+    color: rgb(238, 38, 71);
+    text-shadow: 4px 2px 18px aqua;
+}
+
+/* about */
+
+#about{
+    padding: 80px 0;
+    color: rgb(163, 186, 206);
+}
+.row{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-column-1{
+    flex-basis: 35%;
+}
+
+.about-column-1 img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.about-column-2{
+    flex-basis: 60%;
+    color: #fff;
+    
+}
+.newera{
+    font-size: 60px;
+    font-weight: 600;
+    color: whitesmoke;
+}
+.achievement{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.achievement-links{
+    margin-right: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.achievement-links::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    left: 0;
+    bottom: -8px;
+    background: rgb(177, 33, 76);
+    transition: 0.5s;
+}
+.achievement-links.active-link::after{
+    width: 50%;
+
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+    color: coral;
+}
+.tab-contents ul li span{
+    font-size: 15px;
+    /* font-weight: 500; */
+}
+.tab-contents{
+    display: none;
+
+}
+.tab-contents.active-tab{
+    display:block
+}
+
+/* comatct */
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    /* text-decoration: none; */
+    /* font-size: 30px; */
+    margin-right:15px;
+    /* color: orange; */
+    display: inline-block;
+    transition: transform 0.5s;
+    
+}
+.social-icons a:hover{
+    /* color: blue; */
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background-color: rgb(226, 43, 150);
+    border: 20px solid rgb(226, 43, 150);
+    margin: 34px 46px 11px 11px;
+    color: white;
+    border-radius: 6px;
+    
+    /* border-collapse: collapse; */
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border:0;
+    outline: none;
+    background: #262626;
+    padding: 20px;
+    margin: 10px 0;
+    color:black;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(42, 66, 53),rgb(156, 41, 85));
+         
+}
+form .btn2{
+    /* padding: 14px 60px; */
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background-color: bisque;
+    color: #080808;
+    font-weight: 300px;
+    margin-top: 20px;
+}
+
+/* css  for small screen  */
+
+nav .fas{
+    display: none;
+}
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 83px;
+        height: -97px;
+    }
+    .father-text{
+        margin-top: 100%;
+        font-size: 16px;
+
+    }
+    .father-text h1{
+        font-size: 30px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display:block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top:25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-column-1, .about-column-2{
+        flex-basis: 100%;
+    }
+    .about-column-1{
+        margin-bottom: 30px;
+    }
+    .about-column-2{
+        font-size: 14px;
+    }
+    .achievement-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+
+
+
+}
+#send{
+    color: #61b752;
+    margin: 0px 0px 0px 14px;
+
+} 
+
+
+

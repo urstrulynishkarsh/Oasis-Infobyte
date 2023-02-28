@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    perspective: 10px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.grad{
+        flex: 1 1;
+        position: relative;
+        height: 35rem;
+        /* margin-top: 100px; */
+    }
+
+.orange{
+border-radius: 50%;
+position: absolute;
+width: 35rem;
+height: 35rem;
+left: 1rem;
+top: -7rem;
+
+background-image: radial-gradient(50% 50% at 50% 50%,rgba(255,61,0,.15) 0,hsla(0,0%,100%,0) 100%);
+}
+
+.purple{
+border-radius: 50%;
+position: absolute;
+width: 35rem;
+height: 35rem;
+top: -7rem;
+left: 25rem;
+background-image: radial-gradient(50% 50% at 50% 50%,rgba(101,31,255,.15) 0,hsla(0,0%,100%,0) 100%);
+}
+
+.yellow{
+border-radius: 50%;
+position: absolute;
+width: 35rem;
+height: 35rem;
+top: -2rem;
+background-image: radial-gradient(50% 50% at 50% 50%,rgba(255,213,79,.2) 0,hsla(0,0%,100%,0) 100%);
+
+}
+
+.orange2{
+border-radius: 50%;
+position: absolute;
+width: 35rem;
+height: 35rem;
+left: 11rem;
+top: -12rem;
+
+background-image: radial-gradient(50% 50% at 50% 50%,rgba(255,61,0,.15) 0,hsla(0,0%,100%,0) 100%);
+}
+
+.orange3{
+    border-radius: 50%;
+    position: absolute;
+    width: 35rem;
+    height: 35rem;
+    left: 11rem;
+    top: -1rem;
+    
+    background-image: radial-gradient(50% 50% at 50% 50%,rgba(255,61,0,.15) 0,hsla(0,0%,100%,0) 100%);
+    }
+
+.purple2{
+border-radius: 50%;
+position: absolute;
+z-index: -10;
+width: 35rem;
+height: 35rem;
+top: -11rem;
+left: 11rem;
+background-image: radial-gradient(50% 50% at 50% 50%,rgba(101,31,255,.15) 0,hsla(0,0%,100%,0) 100%);
+}
+
+.review{
+box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.color1{
+filter: grayscale(1);
+opacity: .8;
+}
+
+[type="radio"]:checked,/*checked description box*/
+[type="radio"]:not(:checked){
+    position: absolute;
+    visibility: hidden;
+}
+
+.all-text:checked +label,
+.all-text:not(:checked)+label{
+    position: relative;
+    align-items: center;
+    margin-right: 1rem;
+    width: 25rem;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+   
+    border: none;
+    
+    z-index: 10;
+    transition: all 200ms linear;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+}
+
+.all-text:checked + label{
+    background-color: rgba(0,0,0,.05);
+} 
+label:hover{
+    background-color: rgba(0,0,0,.05);
+}
+
+.img-wrap{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 20rem;
+    height: 20rem;
+    /* display: inline-block; */
+    z-index: 9;
+    transition: all 550ms linear;
+    transition-delay: 100ms;
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(ai.svg);
+    opacity: 0;
+}
+
+.for-text-1:checked ~ .image-1{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.image-2{
+    background-image: url("usecases.svg");
+}
+.for-text-2:checked ~ .image-2{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.image-3{
+    background-image: url("languages.svg");
+}
+.for-text-3:checked ~ .image-3{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.image-4{
+    background-image: url("tones.svg");
+}
+.for-text-4:checked ~ .image-4{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.image-5{
+    background-image: url("formulas.svg");
+}
+.for-text-5:checked ~ .img-wrap.image-5{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+
+
+@keyframes shake{
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+}
+
+.all-section:checked +label,
+.all-section:not(:checked)+label{
+    position: relative;
+    align-items: center;
+    margin-right: 1rem;
+    width: 25rem;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+   
+    border: none;
+    
+    z-index: 10;
+    transition: all 200ms linear;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+}
+
+.all-section:checked + label{
+    background-color: rgba(0,0,0,.05);
+} 
+
+.img-wrap2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20rem;
+    height: 20rem;
+    /* display: inline-block; */
+    z-index: 9;
+    transition: all 550ms linear;
+    transition-delay: 100ms;
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(expand.svg);
+    opacity: 0;
+}
+
+.for-section-1:checked ~ .part-1{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.part-2{
+    background-image: url("rephrase\ \(1\).svg");
+}
+.for-section-2:checked ~ .part-2{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.part-3{
+    background-image: url("plagiarism\ \(1\).svg");
+}
+.for-section-3:checked ~ .part-3{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.part-4{
+    background-image: url("formatting.svg");
+}
+.for-section-4:checked ~ .part-4{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+
+
+.color-btn:checked +label,
+.color-btn:not(:checked)+label{
+    position: relative;
+    align-items: center;
+    margin-right: 1rem;
+    width: 25rem;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+   
+    border: none;
+    
+    z-index: 10;
+    transition: all 200ms linear;
+    background-position: center;
+    background-size: cover;
+    border: 3px solid transparent;
+}
+
+.color-btn:checked + label{
+    background-color: rgba(0,0,0,.05);
+} 
+
+ .helloji{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20rem;
+    height: 20rem;
+    
+    z-index: 9;
+    transition: all 550ms linear;
+    transition-delay: 100ms;
+    background-position: center top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(folders.svg);
+    opacity: 0;
+} 
+
+
+.for-color-1:checked ~ .new-1{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.new-2{
+    background-image: url("history.svg");
+}
+.for-color-2:checked ~ .new-2{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.new-3{
+    background-image: url("team.svg");
+}
+.for-color-3:checked ~ .new-3{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+.new-4{
+    background-image: url("collaborate.svg");
+}
+.for-color-4:checked ~ .new-4{
+    opacity: 1;
+    animation: shake 0.7s cubic-bezier(0.36,0.07,0.19,0.97) both;
+}
+
+.customgrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
